@@ -19,10 +19,11 @@ function Login() {
     function handlesubmit(e) {
         e.preventDefault();
         console.log("Login Page")
-        console.log(formdata.username)
-        console.log(formdata.password)
+        {/*console.log(formdata.username)
+        console.log(formdata.password)*/}
+        console.log(formdata)
         alert("Login Successful")
-        navigate("/dashboard",{
+        navigate("/Dashboard",{
             state:formdata
         })
         
