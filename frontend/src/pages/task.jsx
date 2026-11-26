@@ -4,4 +4,4 @@ return <div>this is task</div>
 
 
 }
-export default Task
+export default Task;
