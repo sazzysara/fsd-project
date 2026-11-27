@@ -62,11 +62,15 @@ function Login() {
     <button type="submit" onClick={()=>Print()}>submit</button>
   */}
 <form action="">
-    <div className="text-blue-500 text-5xl font-bold">HI</div>
-    <input type="text" required placeholder="username" name="username"  onChange={handlechange}></input>
-    <input type="password" required placeholder="Enter your password" name="password"  onChange={handlechange}></input>
-    {/* <button type="submit" onClick={()=>console.log(email,pass)}>Submit</button> */}
-    <button type="submit" onClick={handlesubmit}>submit</button>
+    <div className="flex justify-center items-center min-h-screen">
+      <div className="border-2 border-purple-500 flex flex-col justify-center items-center gap-3">
+         <input type="text" required placeholder="username" name="username"  onChange={handlechange}></input>
+         <input type="password" required placeholder="Enter your password" name="password"  onChange={handlechange}></input>
+         {/* <button type="submit" onClick={()=>console.log(email,pass)}>Submit</button> */}
+         <button type="submit" onClick={handlesubmit}>submit</button>
+
+      </div>
+    </div>
 </form>
   </>
   );
