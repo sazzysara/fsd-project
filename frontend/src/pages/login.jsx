@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 
 
@@ -12,30 +12,42 @@ function Login() {
     console.log(email,pass)
     */}
     const navigate=useNavigate();
-    const[formdata,setFormdata]=useState( {
+    const[logindata,setLogindata]=useState( {
         username:"",
         password:""
     });
-    function handlesubmit(e) {
+    const location=useLocation();
+    const registerdata=location.state
+
+    const handlesubmit=(e)=> {
         e.preventDefault();
         console.log("Login Page")
         {/*console.log(formdata.username)
         console.log(formdata.password)*/}
-        console.log(formdata)
-        alert("Login Successful")
+        console.log("login data",logindata)
+        console.log("register data",registerdata)
+        {/*alert("Login Successful")
         navigate("/Dashboard",{
-            state:formdata
-        })
+            state:logindata
+        })*/}
+        if(registerdata.name===logindata.username && registerdata.password===logindata.password ){
+            console.log("successful")
+            navigate("/Dashboard",{
+              state: logindata
+            })
+        }else{
+          console.log("not valid")
+        }
         
     }
     function handlechange(e) {
-    setFormdata({
-        ...formdata,
+    setLogindata({
+        ...logindata,
         [e.target.name]:e.target.value
     });
     }
     function Print(){
-        console.log(formdata)
+        console.log(logindata)
     }
   
     
@@ -57,7 +69,6 @@ function Login() {
     <button type="submit" onClick={handlesubmit}>submit</button>
 </form>
   </>
-    
   );
 }
 export default Login;

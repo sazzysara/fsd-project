@@ -11,6 +11,10 @@ import Dashboard from "./pages/dashboard";
 import Calendar from "./pages/calendar";
 import Settings from "./pages/settings";
 import Register from "../src/pages/register";
+import Admin from "./pages/admin/adminLayout";
+import AdminDashboard from "./pages/admin/Adashboard";
+import Details from "./pages/admin/AuserDetails";
+import AdminSettings from "./pages/admin/Asettings";
 
 
 function App() {
@@ -25,6 +29,11 @@ function App() {
   <Route path='/calendar' element={<Calendar/>}/>
   <Route path="/settings" element={<Settings/>} />
   <Route path="/register" element={<Register/>} />
+  <Route path="/admin" element={<Admin/>}>
+    <Route path="adminDashboard" element={<AdminDashboard/>} />
+    <Route path="userDetails" element={<Details/>} />
+    <Route path="settings" element={<AdminSettings/>} />
+  </Route>
 
 </Routes>
   </BrowserRouter>
