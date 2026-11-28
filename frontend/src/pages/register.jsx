@@ -21,7 +21,7 @@ return(
     <div className="flex justify-center items-center min-h-screen">
         <div className="border-2 border-gray-800 rounded-2xl p-5 flex flex-col items-center gap-3 ">
         <h2 className="flex flex-col justify-center font-bold text-purple-600">Register Details</h2>
-        <input className="border border-gray-500 p-2 rounded-xl w-50" type="text" placeholder="Enter your name" {...register("name")}></input>
+    <input className="border border-gray-500 p-2 rounded-xl w-50" type="text" placeholder="Enter your name" {...register("name")}></input>
     <p>{errors.name?.message}</p>
     <input className="border border-gray-500 p-2 rounded-xl w-50" type="email" placeholder="Enter your email" {...register("email")}></input>
     <p>{errors.email?.message}</p>

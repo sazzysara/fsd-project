@@ -64,7 +64,9 @@ function Login() {
 <form action="">
     <div className="flex justify-center items-center min-h-screen">
       <div className="border-2 border-purple-500 flex flex-col justify-center items-center gap-3">
+         <label className="font-bold">Name</label>
          <input type="text" required placeholder="username" name="username"  onChange={handlechange}></input>
+         <label className="font-bold">Password</label>
          <input type="password" required placeholder="Enter your password" name="password"  onChange={handlechange}></input>
          {/* <button type="submit" onClick={()=>console.log(email,pass)}>Submit</button> */}
          <button type="submit" onClick={handlesubmit}>submit</button>
